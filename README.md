@@ -38,7 +38,7 @@ Now you should have the following software installed on your machine and get som
 ## Application
 ### Browser Extension
 #### 1.Basic Plug-in Installation
-Install [划词翻译](https://hcfy.app/) Plug-in.
+Install [划词翻译](https://hcfy.app/?i=65e91c07d0b0f994bc8a7907) Plug-in.
 #### 2. Configuration
 - open the plug-in settings page
 - navigate to the `通用设置-其他` tab.

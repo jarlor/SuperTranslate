@@ -21,11 +21,6 @@ def hcfy_translate():
     """
     interface to HCFY \n
     Link: https://hcfy.app/docs/services/custom-api/ \n
-    Args:
-        input required field: name, text, destination, source
-    Returns:
-        output required field : text, from, to, result
-
     """
     input = dict(request.json)
     text: str = input['text']
@@ -35,7 +30,7 @@ def hcfy_translate():
         "text": text,
         "from": "中文(简体)",
         "to": "英语",
-        "result": translate_result
+        "result": [translate_result]
 
     }
     return jsonify(result)
@@ -45,10 +40,8 @@ def hcfy_translate():
 def zotero_translate():
     """
     interface to zotero \n
-    Args:
-        input required field: text,source_lang,target_lang
-    Returns:
-        output required field : data
+    input required field and format: text:str,source_lang:str,target_lang:str
+    output required field : data:str
 
     """
     input = dict(request.json)

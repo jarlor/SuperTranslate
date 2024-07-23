@@ -7,6 +7,9 @@
 """
 
 from flask import Flask, request, jsonify
+import dotenv
+
+dotenv.load_dotenv()
 
 app = Flask(__name__)
 

@@ -5,6 +5,8 @@
 @Date   : 07/03/2024 22:25
 @Desc   : OpenAI API
 """
+from os import environ
+
 from openai import OpenAI
 
 client = OpenAI()
@@ -21,7 +23,8 @@ def universal_translate_by_gpt(text: str, prompt: str, *args, **kwargs) -> str:
 
     """
     return client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        # 从环境变量中获取model 名称
+        model=environ.get('OPENAI_MODEL_NAME', 'gpt-4o'),
         messages=[
             {"role": "system", "content": prompt},
             {"role": "user", "content": text}
